@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SDN Muara Babuat 2</title>
+<!-- Google Fonts: Public Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#064e3b",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#022c22",
+                        "on-primary-container": "#a7f3d0",
+                        "secondary": "#fbbf24",
+                        "on-secondary": "#1c1917",
+                        "secondary-container": "#f59e0b",
+                        "on-secondary-container": "#fffbeb",
+                        "tertiary": "#064e3b",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#022c22",
+                        "on-tertiary-container": "#a7f3d0",
+                        "error": "#b91c1c",
+                        "on-error": "#ffffff",
+                        "error-container": "#fef2f2",
+                        "on-error-container": "#7f1d1d",
+                        "background": "#f8fafc",
+                        "on-background": "#0f172a",
+                        "surface": "#ffffff",
+                        "on-surface": "#0f172a",
+                        "surface-variant": "#e2e8f0",
+                        "on-surface-variant": "#475569",
+                        "outline": "#94a3b8",
+                        "outline-variant": "#cbd5e1",
+                        "inverse-surface": "#0f172a",
+                        "inverse-on-surface": "#f8fafc",
+                        "inverse-primary": "#a7f3d0",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f8fafc",
+                        "surface-container": "#f1f5f9",
+                        "surface-container-high": "#e2e8f0",
+                        "surface-container-highest": "#cbd5e1",
+                        "midnight-navy": "#064e3b",
+                        "burnished-gold": "#fbbf24"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "4px",
+                        "lg": "4px",
+                        "xl": "4px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "section-sm": "64px",
+                        "gutter": "24px",
+                        "margin-lg": "64px",
+                        "margin-sm": "16px",
+                        "section-lg": "128px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Public Sans"],
+                        "headline-lg-mobile": ["Public Sans"],
+                        "label-lg": ["Public Sans"],
+                        "body-lg": ["Public Sans"],
+                        "label-sm": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "headline-md": ["Public Sans"],
+                        "headline-lg": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-lg": ["14px", { "lineHeight": "1", "letterSpacing": "0.06em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    },
+                    "boxShadow": {
+                        "institutional": "0 4px 24px rgba(6, 78, 59, 0.05)"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar Component -->
+<nav class="bg-primary fixed top-0 w-full z-50 border-b border-surface-border">
+<div class="max-w-[1440px] mx-auto px-margin-lg flex justify-between items-center h-16">
+<!-- Brand -->
+<div class="font-headline-md text-headline-md font-bold text-on-primary">
+                SDN Muara Babuat 2
+            </div>
+<!-- Navigation Links -->
+<div class="hidden md:flex space-x-gutter items-center">
+<!-- Active Link (Beranda) -->
+<a class="font-label-lg text-label-lg text-secondary border-b-2 border-secondary pb-1 transition-all duration-200" href="#">
+                    Beranda
+                </a>
+<!-- Inactive Links -->
+<a class="font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary transition-colors duration-200" href="#">
+                    Profil Sekolah
+                </a>
+<a class="font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary transition-colors duration-200" href="#">
+                    Pengumuman PPDB
+                </a>
+</div>
+<!-- Trailing CTA -->
+<button class="bg-secondary text-on-secondary font-label-lg text-label-lg px-[16px] py-2 rounded transition-colors duration-200 hover:bg-secondary-container">
+                Hubungi Kami
+            </button>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative w-full h-[700px] min-h-[500px] flex items-center justify-center overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A breathtaking, wide-angle architectural photograph of a modern, prestigious public school building named SDN Muara Babuat 2. The building features clean lines, expansive glass windows reflecting a bright morning sky, and elegant structural elements. The school yard is immaculately maintained with manicured green lawns and subtle landscaping. Shot during golden hour with soft, warm sunlight casting long, architectural shadows. The color palette emphasizes deep institutional navy blue accents against pristine white walls, creating a sense of authoritative stability and modern educational excellence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyxhUQsEUeX4BSUxhtT11Z6k_S0mEQDHVuQ28NvSPBrgf_ZlBOdKeM38qIdMHwPHNpAfVmF2xRI_1wG60EUhYJMs5X5DqkG0psRAukY0BpiHNqD0_dRcpSJJZRZWAs3Oj2rQjeYEHjGkyt-3f7oRrszjS2YTLgDuFYV-ZIgNLiuCod7Ber_7E9xV84YK5LWtK4021-yBkPXD0Cwm-o6eEuyY8D7OFgtUCYtC4oRG9gQhGODv3qrCc9')"></div>
+<!-- Midnight Navy Overlay for AA Contrast -->
+<div class="absolute inset-0 bg-primary/70"></div>
+<!-- Content Container -->
+<div class="relative z-10 max-w-[1024px] mx-auto px-margin-lg text-center flex flex-col items-center">
+<h1 class="font-display-lg text-display-lg text-on-primary">
+                    Membentuk Masa Depan Melalui Pendidikan Berkualitas
+                </h1>
+<p class="font-body-lg text-body-lg text-on-primary/90 max-w-3xl mt-gutter">
+                    SD Negeri Muara Babuat 2 berkomitmen untuk menyediakan lingkungan belajar yang inklusif dan inovatif bagi seluruh siswa.
+                </p>
+<div class="mt-section-sm flex flex-col sm:flex-row gap-gutter">
+<button class="bg-secondary text-on-secondary font-label-lg text-label-lg px-[16px] py-3 rounded transition-colors hover:bg-secondary-container shadow-institutional">
+                        Pelajari Lebih Lanjut
+                    </button>
+<button class="border border-secondary text-secondary font-label-lg text-label-lg px-[16px] py-3 rounded transition-colors hover:bg-secondary/10">
+                        Hubungi Kami
+                    </button>
+</div>
+</div>
+</section>
+<!-- Visi & Misi Section -->
+<section class="py-section-lg max-w-[1440px] mx-auto px-margin-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-section-sm">
+<!-- Visi Card -->
+<div class="bg-surface-container-lowest border border-surface-border p-section-sm rounded shadow-institutional flex flex-col items-start">
+<div class="bg-secondary/20 text-secondary px-3 py-1 rounded font-label-sm text-label-sm mb-gutter flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+                        PANDANGAN KEDEPAN
+                    </div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-gutter">
+                        Visi Kami
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Menjadi institusi pendidikan dasar terdepan yang menghasilkan generasi berkarakter kuat, berprestasi akademik tinggi, dan siap menghadapi tantangan global dengan berlandaskan nilai-nilai integritas dan inovasi berkelanjutan.
+                    </p>
+</div>
+<!-- Misi Card -->
+<div class="bg-surface-container-lowest border border-surface-border p-section-sm rounded shadow-institutional flex flex-col items-start relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-background -mr-16 -mt-16 rounded-full opacity-50 pointer-events-none"></div>
+<div class="bg-primary/10 text-primary px-3 py-1 rounded font-label-sm text-label-sm mb-gutter flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">target</span>
+                        LANGKAH STRATEGIS
+                    </div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-gutter">
+                        Misi Kami
+                    </h2>
+<ul class="space-y-4 font-body-lg text-body-lg text-on-surface-variant list-none pl-0">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="">Menyediakan kurikulum komprehensif yang memadukan keunggulan akademik dan pengembangan karakter.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="">Membangun lingkungan belajar yang aman, inklusif, dan mendukung potensi setiap siswa.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="">Meningkatkan kompetensi pendidik melalui pelatihan profesional berkelanjutan.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Kepala Sekolah Section -->
+<section class="py-section-lg bg-surface-container border-y border-surface-border">
+<div class="max-w-[1440px] mx-auto px-margin-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<!-- Image Column (5 cols) -->
+<div class="md:col-span-5">
+<div class="rounded overflow-hidden shadow-institutional aspect-[4/5] relative">
+<img class="w-full h-full object-cover" data-alt="A highly professional and dignified portrait of a school principal standing in a brightly lit, modern institutional office or library. The principal exudes authoritative stability, warmth, and confidence, wearing formal corporate attire. The background features slightly blurred bookshelves and architectural lines, emphasizing a clean, minimalist environment. The lighting is soft and flattering, highlighting the principal's face with high contrast against the lighter background. The overall mood is prestigious and welcoming, reflecting a commitment to educational excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAibCVEyhXCTaVG9_EO6pPi3sI2HWE507YB2bddivIl1Uo3frydKJKvbtmFP0ikf3riiL5tZv7UNVjBiutvhL5fSInUR005M-K_Ui7UXLWVx6oy_Rzvd7jMz_kMyVoIJxZzjLf3nNwvPLgMcmoG0KACAof6nOTZzUYkM6n6MC4a5TsjJq_lDhFfQym4TTNaTOmU9JUwXqqFD2Ju96fPQzr3kwwhnpT8dXNxoX30mGEx0Wa02n4wdmSB"/>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-gutter pt-section-sm">
+<h3 class="font-headline-md text-headline-md font-bold text-on-primary">Bpk. Haryanto, S.Pd., M.Si.</h3>
+<p class="font-label-lg text-label-lg text-secondary mt-2">Kepala Sekolah SDN Muara Babuat 2</p>
+</div>
+</div>
+</div>
+<!-- Text Column (7 cols) -->
+<div class="md:col-span-7 md:pl-section-sm mt-section-sm md:mt-0">
+<span class="material-symbols-outlined text-secondary text-[48px] opacity-20 block mb-6">format_quote</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-gutter leading-tight">
+                            "Membangun Fondasi Kokoh untuk Pemimpin Masa Depan."
+                        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                            Selamat datang di portal resmi SDN Muara Babuat 2. Sebagai institusi yang menjunjung tinggi integritas dan dedikasi, kami bangga dapat menjadi rumah kedua bagi putra-putri Anda. Pendidikan dasar adalah tahap krusial yang menentukan arsitektur mental dan intelektual seorang anak.
+                        </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-section-sm">
+                            Fokus utama kami bukan hanya pada transfer pengetahuan, melainkan pembentukan karakter yang tangguh, etos kerja yang disiplin, dan rasa ingin tahu yang tak terbatas. Dengan dukungan fasilitas modern dan tenaga pendidik berdedikasi tinggi, kami berkomitmen menjaga standar keunggulan di setiap aspek pembelajaran.
+                        </p>
+<a class="inline-flex items-center gap-2 font-label-lg text-label-lg text-primary hover:text-secondary transition-colors pb-1 border-b border-primary hover:border-secondary" href="#">
+                            Baca Profil Lengkap <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Ekstrakurikuler Section -->
+<section class="py-section-lg max-w-[1440px] mx-auto px-margin-lg bg-background">
+<div class="text-center mb-section-sm max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Pengembangan Karakter Terpadu</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Program ekstrakurikuler kami dirancang secara strategis untuk melengkapi pencapaian akademik, mengasah kepemimpinan, kerja tim, dan kreativitas siswa dalam lingkungan yang terstruktur.
+                </p>
+</div>
+<!-- Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1: Pramuka -->
+<div class="bg-surface-container-lowest border border-surface-border rounded overflow-hidden shadow-institutional group hover:shadow-[0_8px_32px_rgba(6,78,59,0.08)] transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A dynamic, high-quality photograph of elementary school students participating in a formal scout (Pramuka) outdoor activity on a vast, well-maintained green field. The students are wearing impeccable brown scout uniforms with red and white neckerchiefs, engaged in a structured team-building exercise. The scene is brightly lit by natural daylight, conveying discipline, camaraderie, and active learning within an institutional educational setting. The composition is clean and modern, avoiding clutter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3LdzG8IOHSc5kM8fvjU8G4umpaiggEWzM9BVvBHBgSCGsSk0t7HBEVdnSiyuPd5YCHJYTAXzCZ8uG-ftSwu20OA_YgxDKvzYCNNhHgwdxcU9N2bb0QgFFSYkTFFrLOXCZFRNAm6e40fNiIBa4TU-Z_e66wqx78yi_sLILf1Emi_4nXbzlmZbVn6KkCSuSS6OlKKERjx9ceeGwikcvJiNidRG4BmiImjOUfg5gxPgN8PQW465At1ED"/>
+</div>
+<div class="p-gutter">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">explore</span>
+<h3 class="font-headline-md text-headline-md font-bold text-primary">Pramuka</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Membentuk kemandirian, kedisiplinan, dan jiwa kepemimpinan melalui metode kepramukaan yang sistematis dan berstandar nasional.
+                        </p>
+</div>
+</div>
+<!-- Card 2: Olahraga -->
+<div class="bg-surface-container-lowest border border-surface-border rounded overflow-hidden shadow-institutional group hover:shadow-[0_8px_32px_rgba(6,78,59,0.08)] transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An energetic, sharp photograph of young students playing basketball on a pristine, modern outdoor school court. The court features clean lines and professional-grade equipment. The students are in matching, professional-looking athletic uniforms, capturing a moment of competitive sportsmanship and teamwork. The lighting highlights the vibrant colors of the court against the institutional backdrop of the school building, emphasizing physical excellence and structured athletic programs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlIZ2i9K1iwdKKaPsjIKxpmQh9nl1MWcd5IDHVTxaa6lNf8xSu4Le34p_CS2fbCVVFUrbrkFFxIfR2XWStWgtJdN_VcIoFIc3HmncaZQ6J7loaNUCZYhFLTAHfYpqnyj1kbmU_hbgFDpyUiaDqe2e8YI4t11VSYHiELEncjEfFCVliJ0B6gC8KwU6PX__t-ESITtWN7ytgpi_TUR6EPplUF89HplJvZaXoVqMEyGEADOLOB4yoriQr"/>
+</div>
+<div class="p-gutter">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">sports_soccer</span>
+<h3 class="font-headline-md text-headline-md font-bold text-primary">Olahraga Prestasi</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Pembinaan fisik dan mental melalui kompetisi olahraga terstruktur untuk menumbuhkan sportivitas dan ketangguhan.
+                        </p>
+</div>
+</div>
+<!-- Card 3: Seni -->
+<div class="bg-surface-container-lowest border border-surface-border rounded overflow-hidden shadow-institutional group hover:shadow-[0_8px_32px_rgba(6,78,59,0.08)] transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A beautifully lit, focused photograph of students engaged in a traditional arts and culture class inside a modern, clean school studio. The students are meticulously practicing a traditional Indonesian dance, wearing elegant, culturally rich attire with subtle gold and dark colors. The studio environment is minimalist, with large windows providing ample natural light that casts soft shadows. The image projects cultural appreciation integrated seamlessly within a high-end educational framework." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2yKvmC-9jyDwdmpDxwUbva0wI0RDHmH8kobA3uIDYmBkM5hz_wyyq0k9fhq4FzGchlxGKH2fp4-su6Jc4zie_TLPrnBn6VlD8FmKivY2gIYWtfHVApKVeD0tdJssU4LwXPDRcXEt7JmuRRHo71ZReqo0YOaFz-JqIpamX6K1oaxV6ZKX-uIu4FP1pHpw5BHofKknLrWv5GL-9MPu67pnGeqpjBBHn5mZ1JHPpC1ivqvTqeL5_rTXf"/>
+</div>
+<div class="p-gutter">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">palette</span>
+<h3 class="font-headline-md text-headline-md font-bold text-primary">Seni Budaya</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Eksplorasi estetika dan pelestarian nilai budaya lokal melalui kurikulum seni yang komprehensif dan apresiatif.
+                        </p>
+</div>
+</div>
+</div>
+<div class="mt-section-sm text-center">
+<button class="border border-primary text-primary font-label-lg text-label-lg px-[16px] py-3 rounded transition-colors hover:bg-surface-container">
+                    Lihat Seluruh Program
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-primary w-full border-t border-on-primary-container/20">
+<div class="max-w-[1440px] mx-auto px-margin-lg py-section-sm flex flex-col md:flex-row justify-between gap-gutter">
+<!-- Brand & Copyright -->
+<div class="flex flex-col gap-4 max-w-md">
+<div class="font-headline-md text-headline-md font-bold text-secondary">
+                    SDN Muara Babuat 2
+                </div>
+<p class="font-body-md text-body-md text-on-primary/80">
+                    © 2024 SDN Muara Babuat 2. Semua Hak Dilindungi. Institusi Pendidikan Berintegritas.
+                </p>
+</div>
+<!-- Links -->
+<div class="flex flex-col sm:flex-row gap-8 sm:gap-gutter">
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary transition-colors duration-200 focus:ring-2 focus:ring-secondary rounded outline-none" href="#">
+                    Kontak Kami
+                </a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary transition-colors duration-200 focus:ring-2 focus:ring-secondary rounded outline-none" href="#">
+                    Peta Situs
+                </a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary transition-colors duration-200 focus:ring-2 focus:ring-secondary rounded outline-none" href="#">
+                    Kebijakan Privasi
+                </a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary transition-colors duration-200 focus:ring-2 focus:ring-secondary rounded outline-none" href="#">
+                    Akreditasi
+                </a>
+</div>
+</div>
+</footer>
+</body></html>
